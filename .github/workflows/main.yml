@@ -29,7 +29,7 @@ jobs:
       - name: Build EXE
         run: |
           cd CareApp
-          pyinstaller --onefile --name careStudy --add-data "public;public" --add-data "data;data" --add-data "schema.sql;." server.py
+                pyinstaller --onefile --name careStudy --add-data "client;client" --add-data "data;data" --add-data "database;database" --add-data "server;server" server.py
           
       - name: Upload EXE
         uses: actions/upload-artifact@v4
