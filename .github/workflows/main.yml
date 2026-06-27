@@ -35,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: careStudy-Windows-EXE
-          path: careStudy/dist/careStudy.exe
+          path: careApp/dist/careStudy.exe
