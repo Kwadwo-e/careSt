@@ -1,0 +1,42 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: careapp
+      POSTGRES_PASSWORD: careapp
+      POSTGRES_DB: careapp
+    ports:
+      - "5432:5432"
+    volumes:
+      - careapp_db:/var/lib/postgresql/data
+      - ./database/migrations:/docker-entrypoint-initdb.d:ro
+
+  server:
+    build: ./server
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      CLIENT_ORIGIN: http://localhost:8080
+      DATABASE_URL: postgres://careapp:careapp@db:5432/careapp
+      JWT_SECRET: change-this-production-secret
+      DEFAULT_ADMIN_USERNAME: superadmin
+      DEFAULT_ADMIN_PASSWORD: ChangeMeNow!2026
+      DEFAULT_ADMIN_NAME: Super Administrator
+      UPLOAD_DIR: /app/uploads
+    ports:
+      - "4000:4000"
+    volumes:
+      - careapp_uploads:/app/uploads
+    depends_on:
+      - db
+
+  client:
+    build: ./client
+    ports:
+      - "8080:80"
+    depends_on:
+      - server
+
+volumes:
+  careapp_db:
+  careapp_uploads:

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Care Study">
+  <rect width="128" height="128" rx="24" fill="#e0f2fe"/>
+  <path d="M30 36h45c13 0 23 10 23 23s-10 23-23 23H58v18H30V36Z" fill="#0284c7"/>
+  <path d="M58 55h17a7 7 0 1 1 0 14H58V55Z" fill="#ffffff"/>
+  <path d="M89 88l15 15 15-15" fill="none" stroke="#0284c7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

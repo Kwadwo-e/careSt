@@ -1,0 +1,25 @@
+{
+  "admins": [
+    {
+      "id": "1572a9d7-cc54-4d17-9b30-377cf57f3a2d",
+      "username": "superadmin",
+      "full_name": "Super Administrator",
+      "password_hash": "$2a$12$JN0wIBiDvrrNhs/DX9a0z.1M8VK4w85NsiM.1i.uxUcbInqJlujFq",
+      "role": "super_admin",
+      "created_at": "2026-06-27T22:27:49.668Z",
+      "updated_at": "2026-06-27T22:27:49.668Z"
+    }
+  ],
+  "supervisors": [],
+  "students": [],
+  "settings": {
+    "submissions_open_at": null,
+    "submissions_close_at": null,
+    "allow_student_file_view": false,
+    "allow_global_resubmission": false,
+    "notice": ""
+  },
+  "files": [],
+  "submissions": [],
+  "auditLogs": []
+}
